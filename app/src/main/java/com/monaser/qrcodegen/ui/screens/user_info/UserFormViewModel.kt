@@ -36,32 +36,29 @@ class UserFormViewModel @Inject constructor(
     }
 
     override fun onAgeChanged(age: Int) {
-        val isValid = age!=0 && age in 12..100
+        val isValid = age!=0
         _state.value = _state.value.copy(
             age = age,
             isAgeValid = isValid,
-            errorMessage = if (!isValid) "Age must be between 1 and 150" else null
+            errorMessage = if (!isValid) "Age not valid" else null
         )
     }
 
     override fun onGenderChanged(gender: String) {
-        val isValid = gender.equals("Male", true) || gender.equals("Female", true) || gender.equals(
-            "Other",
-            true
-        )
+        val isValid = gender.equals("Male", true) || gender.equals("Female", true)
         _state.value = _state.value.copy(
             gender = gender,
             isGenderValid = isValid,
-            errorMessage = if (!isValid) "Invalid gender value" else null
+            errorMessage = if (!isValid) "Please select a gender" else null
         )
     }
 
     override fun onPhoneNumberChanged(phoneNumber: String) {
-        val isValid = phoneNumber.length == 11
+        val isValid = phoneNumber.length == 11 && phoneNumber.startsWith("01")
         _state.value = _state.value.copy(
             phoneNumber = phoneNumber,
             isPhoneNumberValid = isValid,
-            errorMessage = if (!isValid) "Phone number must be 10 digits" else null
+            errorMessage = if (!isValid) "Phone number must begin with 01..x and have 11 digits" else null
         )
     }
 

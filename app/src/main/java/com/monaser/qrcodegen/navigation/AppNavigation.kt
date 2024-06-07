@@ -3,12 +3,13 @@
  */
 package com.monaser.qrcodegen.navigation
 
+import PaymentOptionsScreen
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.monaser.qrcodegen.ui.screens.payment.PaymentOptionsScreen
+import com.monaser.qrcodegen.ui.screens.qr_code.QRCodeScreen
 import com.monaser.qrcodegen.ui.screens.user_info.UserFormScreen
 
 @Composable
@@ -23,6 +24,7 @@ fun AppNavigation() {
                 PaymentOptionsScreen()
             }
             composable(Screen.QrCode.route) {
+                QRCodeScreen()
             }
         }
     }

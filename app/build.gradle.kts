@@ -84,6 +84,9 @@ dependencies {
 
     //QR code scanner
     implementation("com.google.mlkit:barcode-scanning:17.1.0")
+    implementation ("com.google.zxing:core:3.4.1")
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+
     //Data store
     implementation ("androidx.datastore:datastore-preferences:1.1.1")
     // Dagger Hilt

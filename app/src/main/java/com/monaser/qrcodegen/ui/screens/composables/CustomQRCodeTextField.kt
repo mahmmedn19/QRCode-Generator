@@ -6,7 +6,6 @@ package com.monaser.qrcodegen.ui.screens.composables
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -68,7 +67,7 @@ fun QRCodeTextField(
             Text(
                 text = errorMessage,
                 color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(start = 16.dp)
+                modifier = Modifier.padding(start = 14.dp)
             )
         }
     }
