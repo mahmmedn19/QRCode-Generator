@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.serilazation)
+    id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -69,5 +73,21 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation (libs.androidx.core.splashscreen)
+    //navigation
 
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.kolinx.serialization.json)
+    implementation("com.airbnb.android:lottie-compose:6.0.1")
+
+
+
+
+    //QR code scanner
+    implementation("com.google.mlkit:barcode-scanning:17.1.0")
+    //Data store
+    implementation ("androidx.datastore:datastore-preferences:1.1.1")
+    // Dagger Hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    ksp("com.google.dagger:hilt-compiler:2.48")
 }
