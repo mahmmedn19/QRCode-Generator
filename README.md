@@ -13,7 +13,7 @@ This link to download APK: https://github.com/mahmmedn19/QRCode-Generator/blob/m
 - [Architecture](#architecture)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Libraries](#Libraries)
+- [Libraries](#libraries)
 
 ## Features
 
@@ -31,7 +31,7 @@ https://github.com/mahmmedn19/QRCode-Generator/assets/100851080/104206f5-7a6b-42
   <img src="https://github.com/mahmmedn19/QRCode-Generator/assets/100851080/d4a8cec4-ff53-4a1d-8997-006b7c7d547f" alt="image1" width="200" style="border: 1px solid #000">
   <img src="https://github.com/mahmmedn19/QRCode-Generator/assets/100851080/59ec416a-60e6-46f7-aed4-57330c2939cb" alt="image2" width="200" style="border: 1px solid #000">
   <img src="https://github.com/mahmmedn19/QRCode-Generator/assets/100851080/f326d675-89ef-49c4-bb91-3ceb1c081f36" alt="image3" width="200" style="border: 1px solid #000">
-  <img src="https://github.com/mahmmedn19/QRCode-Generator/assets/100851080/1ee24d31-f428-4a23-9136-1b36b0a134f1" alt="image4" width="200" style="border: 1px solid #000">
+  <img src="https://github.com/mahmmedn19/QRCode-Generator/assets/100851080/f230069f-2c15-4ef8-a048-e8753ce73c7a" alt="image4" width="200" style="border: 1px solid #000">
   
 </div>
 
