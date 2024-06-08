@@ -46,12 +46,17 @@ fun QRCodeScreenContent(
     viewModel: QRCodeViewModel
 ) {
     var progress by remember { mutableStateOf(0f) }
+    var currentSeconds by remember { mutableStateOf(0) }
 
     LaunchedEffect(Unit) {
         while (true) {
-            for (i in 0..100) {
-                delay(50)
+            val totalDuration = 5000L
+            val interval = totalDuration / 100
+
+            for (i in 1..100) {
+                delay(interval)
                 progress = i / 100f
+                currentSeconds = 5 - (i * 5 / 100)
             }
             viewModel.loadUserData()
         }
@@ -63,7 +68,7 @@ fun QRCodeScreenContent(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        CircularLoadingAnimation(progress)
+        CircularLoadingAnimation(progress, currentSeconds)
         Text(text = "QR Code for ${state.userName}")
         Spacer(modifier = Modifier.height(16.dp))
         state.qrCodeImage?.let { bitmap ->
