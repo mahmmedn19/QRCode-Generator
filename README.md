@@ -4,6 +4,8 @@
 
 This project is a QR Code Generator App that dynamically generates a QR code based on user input and selected payment options. The QR code updates every 5 seconds and includes encrypted user information and payment details.
 
+This link to download APK: https://github.com/mahmmedn19/QRCode-Generator/blob/main/app/release/app-release.apk
+
 ## Table of Contents
 
 - [Features](#features)
