@@ -1,3 +1,5 @@
+package com.monaser.qrcodegen.ui.screens.payment_options
+
 /**
  * @author Mohamed Naser.
  */
@@ -39,10 +41,7 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.monaser.qrcodegen.R
 import com.monaser.qrcodegen.navigation.Screen
 import com.monaser.qrcodegen.ui.screens.composables.EventHandler
-import com.monaser.qrcodegen.ui.screens.payment_options.PaymentInteractionListener
-import com.monaser.qrcodegen.ui.screens.payment_options.PaymentUiEffect
-import com.monaser.qrcodegen.ui.screens.payment_options.PaymentUiState
-import com.monaser.qrcodegen.ui.screens.payment_options.PaymentViewModel
+import com.monaser.qrcodegen.ui.screens.composables.QRCodeButton
 
 @Composable
 fun PaymentOptionsScreen(
@@ -159,15 +158,10 @@ fun PaymentScreenContent(
                 }
             }
             Spacer(modifier = Modifier.height(16.dp))
-
-            Button(
-                onClick = {
-                    listener.onNextClicked()
-                },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(text = "Next")
-            }
+            QRCodeButton(
+                text = "Next",
+                onClick = { listener.onNextClicked() }
+            )
 
             if (!state.isSelectedAmount) {
                 Text(

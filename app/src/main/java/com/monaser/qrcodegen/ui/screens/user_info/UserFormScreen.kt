@@ -18,7 +18,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenu
@@ -48,6 +47,7 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.monaser.qrcodegen.R
 import com.monaser.qrcodegen.navigation.Screen
 import com.monaser.qrcodegen.ui.screens.composables.EventHandler
+import com.monaser.qrcodegen.ui.screens.composables.QRCodeButton
 import com.monaser.qrcodegen.ui.screens.composables.QRCodeTextField
 
 @Composable
@@ -225,21 +225,16 @@ fun UserFormScreenContent(
                     )
                 }
             }
-
-            Button(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 16.dp),
+            QRCodeButton(
+                text = "Next",
                 onClick = {
                     showError = true
                     if (!state.isNameValid || !state.isAgeValid || !state.isGenderValid || !state.isPhoneNumberValid) {
-                        return@Button
+                        return@QRCodeButton
                     }
                     listener.onNextClicked()
-                },
-            ) {
-                Text(text = "Next")
-            }
+                }
+            )
         }
     }
 }

@@ -3,7 +3,7 @@
  */
 package com.monaser.qrcodegen.navigation
 
-import PaymentOptionsScreen
+import com.monaser.qrcodegen.ui.screens.payment_options.PaymentOptionsScreen
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.navigation.compose.NavHost
